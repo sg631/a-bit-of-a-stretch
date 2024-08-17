@@ -1,41 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://cey3nrc5mlu4s"]
+[gd_scene load_steps=9 format=4 uid="uid://cey3nrc5mlu4s"]
 
 [ext_resource type="PackedScene" uid="uid://xqpiflreh0sr" path="res://player.tscn" id="1_u8q30"]
 [ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="2_paix3"]
 [ext_resource type="Script" path="res://growPoints.gd" id="3_8gu2j"]
 [ext_resource type="PackedScene" uid="uid://cma6ionics4h1" path="res://soul-orb.tscn" id="3_862ao"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qe7h"]
-size = Vector2(432, 20)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6icbr"]
+[ext_resource type="Texture2D" uid="uid://bs7e47mc5f52i" path="res://tilepam.png" id="5_68r1d"]
 
 [sub_resource type="Theme" id="Theme_lklhq"]
 /font_sizes/font = 16
 /fonts/font = ExtResource("2_paix3")
 Label/fonts/font = ExtResource("2_paix3")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a2bgx"]
+texture = ExtResource("5_68r1d")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_mpdaf"]
+physics_layer_0/collision_layer = 3
+sources/1 = SubResource("TileSetAtlasSource_a2bgx")
+
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 42)
-shape = SubResource("RectangleShape2D_4qe7h")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-0.500008, 42)
-scale = Vector2(435, 20)
-texture = SubResource("PlaceholderTexture2D_6icbr")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Sprite2D"]
-position = Vector2(21, 42)
-scale = Vector2(173, 20)
-texture = SubResource("PlaceholderTexture2D_6icbr")
-
 [node name="Node2D" parent="." instance=ExtResource("1_u8q30")]
-position = Vector2(-19, -11)
+position = Vector2(-15, -27)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -60,21 +50,8 @@ script = ExtResource("3_8gu2j")
 metadata/_edit_use_anchors_ = true
 
 [node name="Node2D2" parent="." instance=ExtResource("3_862ao")]
-position = Vector2(64, -25)
+position = Vector2(58, -77)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-collision_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-1, -242)
-shape = SubResource("RectangleShape2D_4qe7h")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
-position = Vector2(-2.50002, -239)
-scale = Vector2(437, 20)
-texture = SubResource("PlaceholderTexture2D_6icbr")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/Sprite2D"]
-position = Vector2(21, 42)
-scale = Vector2(173, 20)
-texture = SubResource("PlaceholderTexture2D_6icbr")
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD+/wAAAQABAAAAAAD//wAAAQABAAAAAAAAAAAAAQABAAAAAAABAAAAAQABAAAAAAACAAAAAQABAAAAAAADAAAAAQABAAAAAAAEAAAAAQABAAAAAAAFAAAAAQABAAAAAAAGAAAAAQABAAAAAAAHAP//AQABAAAAAAAIAP//AQABAAAAAAAJAP//AQABAAAAAAAKAP//AQABAAAAAAALAP//AQABAAAAAAAMAP//AQABAAAAAAANAP//AQABAAAAAAAOAP//AQABAAAAAAAHAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAJAAAAAQAAAAAAAAAKAAAAAQAAAAAAAAALAAAAAQAAAAAAAAAMAAAAAQAAAAAAAAANAAAAAQAAAAAAAAAOAAAAAQAAAAAAAAAOAAEAAQAAAAAAAAANAAEAAQAAAAAAAAAMAAEAAQAAAAAAAAALAAEAAQAAAAAAAAAKAAEAAQAAAAAAAAAJAAEAAQAAAAAAAAAIAAEAAQAAAAAAAAAHAAEAAQAAAAAAAAAGAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAADAAEAAQAAAAAAAAACAAEAAQAAAAAAAAABAAEAAQAAAAAAAAAAAAEAAQAAAAAAAAD//wEAAQAAAAAAAAD+/wEAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_mpdaf")
