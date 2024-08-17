@@ -1,3 +1,3 @@
 extends Node
 
-var growPoints : int = 0;
+var growPoints : float = 5;
