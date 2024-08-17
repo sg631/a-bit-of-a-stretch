@@ -13,8 +13,8 @@ config_version=5
 config/name="A Bit of A Stretch"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/image="res://aboas-character.png"
-config/icon="res://aboas-character.png"
+boot_splash/image="res://samvithlabs.png"
+config/icon="res://aboas-soulorb.png"
 
 [input]
 
