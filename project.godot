@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/image="res://samvithlabs.png"
 config/icon="res://aboas-soulorb.png"
 
+[autoload]
+
+Autoload="*res://autoload.gd"
+
 [input]
 
 stretch_right={

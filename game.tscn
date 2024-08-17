@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cey3nrc5mlu4s"]
+[gd_scene load_steps=8 format=3 uid="uid://cey3nrc5mlu4s"]
 
 [ext_resource type="PackedScene" uid="uid://xqpiflreh0sr" path="res://player.tscn" id="1_u8q30"]
 [ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="2_paix3"]
+[ext_resource type="Script" path="res://growPoints.gd" id="3_8gu2j"]
 [ext_resource type="PackedScene" uid="uid://cma6ionics4h1" path="res://soul-orb.tscn" id="3_862ao"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qe7h"]
@@ -49,6 +50,7 @@ theme_override_font_sizes/font_size = 30
 text = "Growth Bits: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("3_8gu2j")
 metadata/_edit_use_anchors_ = true
 
 [node name="Node2D2" parent="." instance=ExtResource("3_862ao")]
