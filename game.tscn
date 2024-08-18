@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cey3nrc5mlu4s"]
+[gd_scene load_steps=13 format=4 uid="uid://cey3nrc5mlu4s"]
 
 [ext_resource type="PackedScene" uid="uid://xqpiflreh0sr" path="res://player.tscn" id="1_u8q30"]
 [ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="2_paix3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://tilemap_interp.gd" id="5_cc7ib"]
 [ext_resource type="PackedScene" uid="uid://bvvub3tnowtof" path="res://shop_code.tscn" id="7_tnco7"]
 [ext_resource type="PackedScene" uid="uid://cj45gjjilgmo2" path="res://killcollidebox.tscn" id="8_p15vl"]
+[ext_resource type="Theme" uid="uid://0vx47m2knchi" path="res://new_theme.tres" id="9_mi8ib"]
 
 [sub_resource type="Theme" id="Theme_lklhq"]
 /font_sizes/font = 16
@@ -324,3 +325,11 @@ scale = Vector2(-0.0399992, 0.32)
 [node name="KillBox6" parent="." instance=ExtResource("8_p15vl")]
 position = Vector2(1353, 138)
 scale = Vector2(-0.04, 0.28)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 5433.0
+offset_top = -2005.0
+offset_right = 5562.0
+offset_bottom = -1972.0
+theme = ExtResource("9_mi8ib")
+text = "You Did It!"

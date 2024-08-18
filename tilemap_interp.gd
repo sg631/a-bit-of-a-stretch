@@ -9,3 +9,6 @@ extends TileMapLayer
 	#if get_parent().get_node("Player"):
 		##bro
 		#null
+func _init() -> void:
+	print(get_coords_for_body_rid(rid_from_int64(64)))
+	print(get_cell_source_id(Vector2i(3, 3)))
