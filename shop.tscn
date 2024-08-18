@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://efficiency_upgrade.gd" id="6_7umlu"]
 [ext_resource type="Script" path="res://length_upgrade.gd" id="7_67342"]
 
-[node name="Node" type="Node"]
+[node name="ShopUI" type="Node"]
 script = ExtResource("1_4cp3i")
 
 [node name="Control" type="Control" parent="."]
@@ -17,10 +17,12 @@ offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 2
-offset_left = 475.0
-offset_top = 218.0
-offset_right = 733.0
-offset_bottom = 514.0
+anchor_left = 11.875
+anchor_top = 5.45
+anchor_right = 18.325
+anchor_bottom = 12.85
+offset_left = -3.05176e-05
+offset_top = -1.52588e-05
 color = Color(0.196078, 0.196078, 0.196078, 1)
 
 [node name="BoxContainer" type="BoxContainer" parent="Control/ColorRect"]
