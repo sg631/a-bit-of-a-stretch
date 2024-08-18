@@ -288,9 +288,21 @@ position = Vector2(4202, -999)
 position = Vector2(3869, -824)
 
 [node name="Node2D2" parent="." instance=ExtResource("8_p15vl")]
-position = Vector2(619, 61)
-scale = Vector2(1.46729, 0.141362)
+position = Vector2(618, 66)
+scale = Vector2(1.5638, -0.231848)
 
 [node name="Node2D3" parent="." instance=ExtResource("8_p15vl")]
-position = Vector2(513, 77)
-scale = Vector2(1.30729, 0.141362)
+position = Vector2(513, 83)
+scale = Vector2(1.32548, 0.213754)
+
+[node name="Node2D4" parent="." instance=ExtResource("8_p15vl")]
+position = Vector2(1220, 198)
+scale = Vector2(5.87277, 0.230442)
+
+[node name="Node2D5" parent="." instance=ExtResource("8_p15vl")]
+position = Vector2(3146, -13)
+scale = Vector2(18.9039, 0.146573)
+
+[node name="Node2D6" parent="." instance=ExtResource("8_p15vl")]
+position = Vector2(5095, -798)
+scale = Vector2(29.5619, 0.206017)
