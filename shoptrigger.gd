@@ -3,6 +3,7 @@ extends Area2D
 func _physics_process(delta: float) -> void:
 	for body in get_overlapping_bodies():
 		if body.editor_description == "Player":
-			var scene = load("res://shop.tscn")
-			var instance = scene.instantiate();
-			$/root/game.add_child(instance)
+			if not get_parent().get_parent().has_node("ShopUI"):
+				var scene = load("res://shop.tscn")
+				var instance = scene.instantiate();
+				get_parent().get_parent().add_child(instance)

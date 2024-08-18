@@ -1,4 +1,4 @@
 extends Node
 
 func _init() -> void:
-	get_child(2)
+	get_node("Control/ColorRect/BoxContainer")
