@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6wyt8i6iyyk5"]
+
+[ext_resource type="Script" path="res://shop.gd" id="1_4cp3i"]
+[ext_resource type="Texture2D" uid="uid://df47ufrdgoeqp" path="res://aboas-shop.png" id="1_jfu8l"]
+[ext_resource type="Script" path="res://shoptrigger.gd" id="2_46l0t"]
+[ext_resource type="Theme" uid="uid://0vx47m2knchi" path="res://new_theme.tres" id="4_dfu10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sroul"]
+size = Vector2(55, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgcvk"]
+size = Vector2(24, 11)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_4cp3i")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(0.5, -6.5)
+shape = SubResource("RectangleShape2D_sroul")
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+script = ExtResource("2_46l0t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_sgcvk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Area2D"]
+texture = ExtResource("1_jfu8l")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 2
+offset_left = 475.0
+offset_top = 218.0
+offset_right = 733.0
+offset_bottom = 514.0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/ColorRect"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.017
+offset_bottom = -0.0320129
+vertical = true
+
+[node name="Shop Label" type="Label" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_dfu10")
+text = "Shop"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_dfu10")
+text = "Speed Upgrade"
+
+[node name="SpeedLabel" type="Label" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 10
+text = "Upgrades the speed of shrink and stretch.
+Cost: 1 Soul  Orb"
+horizontal_alignment = 1
+
+[node name="EfficiencyUpgrade" type="Button" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_dfu10")
+text = "Speed Upgrade"
+
+[node name="EfficiencyLabel" type="Label" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 10
+text = "Upgrades the speed of shrink and stretch.
+Cost: 1 Soul  Orb"
+horizontal_alignment = 1
