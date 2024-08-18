@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ap3j"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Player" type="Node2D"]
 editor_description = "Player"
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
