@@ -114,3 +114,45 @@ position = Vector2(2576, -303)
 
 [node name="Node2D" parent="." instance=ExtResource("7_tnco7")]
 position = Vector2(219, -29)
+
+[node name="SoulOrb5" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(626, -72)
+
+[node name="SoulOrb6" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(531, -39)
+
+[node name="SoulOrb7" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(340, 23)
+
+[node name="SoulOrb8" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(-122, -11)
+
+[node name="SoulOrb9" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(156, -26)
+
+[node name="SoulOrb10" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1182, 61)
+
+[node name="SoulOrb11" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(901, 27)
+
+[node name="SoulOrb12" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1287, 75)
+
+[node name="SoulOrb13" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1099, -120)
+
+[node name="SoulOrb14" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1314, 75)
+
+[node name="SoulOrb15" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1529, 8)
+
+[node name="SoulOrb16" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1699, -24)
+
+[node name="SoulOrb17" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1222, -105)
+
+[node name="SoulOrb18" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(1249, -104)
