@@ -6,4 +6,5 @@ func _physics_process(delta: float) -> void:
 			if not get_parent().get_parent().has_node("ShopUI"):
 				var scene = load("res://shop.tscn")
 				var instance = scene.instantiate();
-				get_parent().get_parent().add_child(instance)
+				var canvasLayer = get_parent().get_parent().get_node("HUD")
+				canvasLayer.add_child(instance)
