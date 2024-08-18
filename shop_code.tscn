@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvvub3tnowtof"]
+
+[ext_resource type="Texture2D" uid="uid://df47ufrdgoeqp" path="res://aboas-shop.png" id="1_3ahjc"]
+[ext_resource type="Script" path="res://shoptrigger.gd" id="2_ftpre"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86r1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jucac"]
+size = Vector2(53, 37)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_3ahjc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_86r1l")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_ftpre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -4.5)
+shape = SubResource("RectangleShape2D_jucac")

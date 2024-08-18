@@ -1,36 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6wyt8i6iyyk5"]
+[gd_scene load_steps=6 format=3 uid="uid://b6wyt8i6iyyk5"]
 
 [ext_resource type="Script" path="res://shop.gd" id="1_4cp3i"]
-[ext_resource type="Texture2D" uid="uid://df47ufrdgoeqp" path="res://aboas-shop.png" id="1_jfu8l"]
-[ext_resource type="Script" path="res://shoptrigger.gd" id="2_46l0t"]
 [ext_resource type="Theme" uid="uid://0vx47m2knchi" path="res://new_theme.tres" id="4_dfu10"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sroul"]
-size = Vector2(55, 41)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgcvk"]
-size = Vector2(24, 11)
+[ext_resource type="Script" path="res://upgrade_speed.gd" id="5_c8mqm"]
+[ext_resource type="Script" path="res://efficiency_upgrade.gd" id="6_7umlu"]
+[ext_resource type="Script" path="res://length_upgrade.gd" id="7_67342"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_4cp3i")
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
-position = Vector2(0.5, -6.5)
-shape = SubResource("RectangleShape2D_sroul")
-
-[node name="Area2D" type="Area2D" parent="Node2D"]
-script = ExtResource("2_46l0t")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
-position = Vector2(0, 8.5)
-shape = SubResource("RectangleShape2D_sgcvk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Area2D"]
-texture = ExtResource("1_jfu8l")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -61,28 +38,51 @@ theme = ExtResource("4_dfu10")
 text = "Shop"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Control/ColorRect/BoxContainer"]
+[node name="SpeedUpgrade" type="Button" parent="Control/ColorRect/BoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme = ExtResource("4_dfu10")
 text = "Speed Upgrade"
+script = ExtResource("5_c8mqm")
 
 [node name="SpeedLabel" type="Label" parent="Control/ColorRect/BoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_dfu10")
 theme_override_font_sizes/font_size = 10
 text = "Upgrades the speed of shrink and stretch.
-Cost: 1 Soul  Orb"
+Cost: 3 Soul  Orb"
 horizontal_alignment = 1
 
 [node name="EfficiencyUpgrade" type="Button" parent="Control/ColorRect/BoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme = ExtResource("4_dfu10")
-text = "Speed Upgrade"
+text = "Efficiency Upgrade"
+script = ExtResource("6_7umlu")
 
 [node name="EfficiencyLabel" type="Label" parent="Control/ColorRect/BoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_dfu10")
 theme_override_font_sizes/font_size = 10
-text = "Upgrades the speed of shrink and stretch.
-Cost: 1 Soul  Orb"
+text = "Allows you to use less Soul Energy while stretching.
+Cost: 2 Soul  Energy"
 horizontal_alignment = 1
+
+[node name="LengthUpgrade" type="Button" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_dfu10")
+text = "Length Upgrade"
+script = ExtResource("7_67342")
+
+[node name="LengthLabel" type="Label" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 10
+text = "Increases the stretch limit
+Cost: 1 Soul Energy"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+text = "Close"

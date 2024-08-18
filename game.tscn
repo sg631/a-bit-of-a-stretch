@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cey3nrc5mlu4s"]
+[gd_scene load_steps=11 format=4 uid="uid://cey3nrc5mlu4s"]
 
 [ext_resource type="PackedScene" uid="uid://xqpiflreh0sr" path="res://player.tscn" id="1_u8q30"]
 [ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="2_paix3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cma6ionics4h1" path="res://soul-orb.tscn" id="3_862ao"]
 [ext_resource type="Texture2D" uid="uid://bs7e47mc5f52i" path="res://tilepam.png" id="5_68r1d"]
 [ext_resource type="Script" path="res://tilemap_interp.gd" id="5_cc7ib"]
+[ext_resource type="PackedScene" uid="uid://bvvub3tnowtof" path="res://shop_code.tscn" id="7_tnco7"]
 
 [sub_resource type="Theme" id="Theme_lklhq"]
 /font_sizes/font = 16
@@ -110,3 +111,6 @@ position = Vector2(1756, -156)
 
 [node name="SoulOrb4" parent="." instance=ExtResource("3_862ao")]
 position = Vector2(2576, -303)
+
+[node name="Node2D" parent="." instance=ExtResource("7_tnco7")]
+position = Vector2(219, -29)
