@@ -15,41 +15,41 @@ func _physics_process(delta: float) -> void:
 
 	#Stretching Movement
 	if Input.is_action_pressed("stretch_right"):
-		scale.x += 0.2;
-		position.x += 2;
+		scale.x += Autoload.upgradeSpeed/10;
+		position.x += Autoload.upgradeSpeed;
 		Autoload.growPoints -= 0.01
 	if Input.is_action_pressed("stretch_left"):
-		scale.x += 0.2;
-		position.x -= 2;
+		scale.x += Autoload.upgradeSpeed/10;
+		position.x -= Autoload.upgradeSpeed;
 		Autoload.growPoints -= 0.01
 	if Input.is_action_pressed("stretch_up"):
-		scale.y += 0.2;
-		position.y += 2;
+		scale.y += Autoload.upgradeSpeed/10;
+		position.y += Autoload.upgradeSpeed;
 		Autoload.growPoints -= 0.01
 	if Input.is_action_pressed("stretch_down"):
-		scale.y += 0.2;
-		position.y += 2;
+		scale.y += Autoload.upgradeSpeed/10;
+		position.y += Autoload.upgradeSpeed;
 		Autoload.growPoints -= 0.01
 	#Shrinking Movement
 	if Input.is_action_pressed("shrink_left"):
 		if scale.x >= 1:
-			scale.x -= 0.2;
-			position.x -= 2;
+			scale.x -= Autoload.upgradeSpeed/10;
+			position.x -= Autoload.upgradeSpeed;
 			Autoload.growPoints += 0.005
 	if Input.is_action_pressed("shrink_right"):
 		if scale.x >= 1:
-			scale.x -= 0.2;
-			position.x += 2;
+			scale.x -= Autoload.upgradeSpeed/10;
+			position.x += Autoload.upgradeSpeed;
 			Autoload.growPoints += 0.005
 	if Input.is_action_pressed("shrink_up"):
 		if scale.y >= 1:
-			scale.y -= 0.2;
-			position.y -= 2;
+			scale.y -= Autoload.upgradeSpeed/10;
+			position.y -= Autoload.upgradeSpeed;
 			Autoload.growPoints += 0.005
 	if Input.is_action_pressed("shrink_down"):
 		if scale.y >= 1:
-			scale.y -= 0.2;
-			position.y += 2;
+			scale.y -= Autoload.upgradeSpeed/10;
+			position.y += Autoload.upgradeSpeed;
 			Autoload.growPoints += 0.005
 	if Autoload.growPoints < 0:
 		get_parent().remove_child(get_parent().get_children()[0]);
