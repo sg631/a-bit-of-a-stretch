@@ -73,7 +73,7 @@ sources/1 = SubResource("TileSetAtlasSource_a2bgx")
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_u8q30")]
-position = Vector2(277, -72)
+position = Vector2(282, -2)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -113,7 +113,7 @@ position = Vector2(1756, -156)
 position = Vector2(2576, -303)
 
 [node name="Node2D" parent="." instance=ExtResource("7_tnco7")]
-position = Vector2(219, -29)
+position = Vector2(1860, -151)
 
 [node name="SoulOrb5" parent="." instance=ExtResource("3_862ao")]
 position = Vector2(626, -72)
@@ -207,3 +207,12 @@ position = Vector2(4294, -1047)
 
 [node name="SoulOrb35" parent="." instance=ExtResource("3_862ao")]
 position = Vector2(4322, -1047)
+
+[node name="SoulOrb36" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(4198, -1304)
+
+[node name="SoulOrb37" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(4222, -1303)
+
+[node name="SoulOrb38" parent="." instance=ExtResource("3_862ao")]
+position = Vector2(4246, -1304)
