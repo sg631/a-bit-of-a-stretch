@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://0vx47m2knchi"]
+
+[ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="1_2yvn7"]
+
+[resource]
+default_font = ExtResource("1_2yvn7")
+default_font_size = 27
+/font_sizes/button = 40
+/fonts/font = ExtResource("1_2yvn7")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4qfwaqnwbhrn"]
+
+[ext_resource type="Theme" uid="uid://0vx47m2knchi" path="res://new_theme.tres" id="1_y6m6a"]
+[ext_resource type="Script" path="res://play.gd" id="2_hs83u"]
+[ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="3_y8cw7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.59
+anchor_right = 0.6
+anchor_bottom = 0.61
+offset_left = 0.47998
+offset_top = -25.064
+offset_right = 0.383972
+offset_bottom = 24.936
+theme = ExtResource("1_y6m6a")
+text = "Play"
+script = ExtResource("2_hs83u")
+
+[node name="Label" type="Label" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(0.4, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.365
+anchor_top = 0.148
+anchor_right = 0.67
+anchor_bottom = 0.235
+offset_left = -0.480011
+offset_top = 3.096
+offset_right = 0.159973
+offset_bottom = -0.280014
+theme_override_fonts/font = ExtResource("3_y8cw7")
+theme_override_font_sizes/font_size = 40
+text = "A Bit Of A Stretch"
