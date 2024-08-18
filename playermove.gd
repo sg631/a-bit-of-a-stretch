@@ -15,21 +15,25 @@ func _physics_process(delta: float) -> void:
 
 	#Stretching Movement
 	if Input.is_action_pressed("stretch_right"):
-		scale.x += Autoload.upgradeSpeed/10;
-		position.x += Autoload.upgradeSpeed;
-		Autoload.growPoints -= 0.01
+		if scale.x < Autoload.upgradeLength:
+			scale.x += Autoload.upgradeSpeed/10;
+			position.x += Autoload.upgradeSpeed;
+			Autoload.growPoints -= 0.01
 	if Input.is_action_pressed("stretch_left"):
-		scale.x += Autoload.upgradeSpeed/10;
-		position.x -= Autoload.upgradeSpeed;
-		Autoload.growPoints -= 0.01
+		if scale.x < Autoload.upgradeLength:
+			scale.x += Autoload.upgradeSpeed/10;
+			position.x -= Autoload.upgradeSpeed;
+			Autoload.growPoints -= 0.01
 	if Input.is_action_pressed("stretch_up"):
-		scale.y += Autoload.upgradeSpeed/10;
-		position.y += Autoload.upgradeSpeed;
-		Autoload.growPoints -= 0.01
+		if scale.y < Autoload.upgradeLength:
+			scale.y += Autoload.upgradeSpeed/10;
+			position.y += Autoload.upgradeSpeed;
+			Autoload.growPoints -= 0.01
 	if Input.is_action_pressed("stretch_down"):
-		scale.y += Autoload.upgradeSpeed/10;
-		position.y += Autoload.upgradeSpeed;
-		Autoload.growPoints -= 0.01
+		if scale.y < Autoload.upgradeLength:
+			scale.y += Autoload.upgradeSpeed/10;
+			position.y += Autoload.upgradeSpeed;
+			Autoload.growPoints -= 0.01
 	#Shrinking Movement
 	if Input.is_action_pressed("shrink_left"):
 		if scale.x >= 1:
