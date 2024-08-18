@@ -18,43 +18,43 @@ func _physics_process(delta: float) -> void:
 		if scale.x < Autoload.upgradeLength:
 			scale.x += Autoload.upgradeSpeed/10;
 			position.x += Autoload.upgradeSpeed;
-			Autoload.growPoints -= 0.01
+			Autoload.growPoints -= Autoload.upgradeEfficiency;
 	if Input.is_action_pressed("stretch_left"):
 		if scale.x < Autoload.upgradeLength:
 			scale.x += Autoload.upgradeSpeed/10;
 			position.x -= Autoload.upgradeSpeed;
-			Autoload.growPoints -= 0.01
+			Autoload.growPoints -= Autoload.upgradeEfficiency;
 	if Input.is_action_pressed("stretch_up"):
 		if scale.y < Autoload.upgradeLength:
 			scale.y += Autoload.upgradeSpeed/10;
 			position.y += Autoload.upgradeSpeed;
-			Autoload.growPoints -= 0.01
+			Autoload.growPoints -= Autoload.upgradeEfficiency;
 	if Input.is_action_pressed("stretch_down"):
 		if scale.y < Autoload.upgradeLength:
 			scale.y += Autoload.upgradeSpeed/10;
 			position.y += Autoload.upgradeSpeed;
-			Autoload.growPoints -= 0.01
+			Autoload.growPoints -= Autoload.upgradeEfficiency;
 	#Shrinking Movement
 	if Input.is_action_pressed("shrink_left"):
 		if scale.x >= 1:
 			scale.x -= Autoload.upgradeSpeed/10;
 			position.x -= Autoload.upgradeSpeed;
-			Autoload.growPoints += 0.005
+			Autoload.growPoints += Autoload.upgradeEfficiency/2;
 	if Input.is_action_pressed("shrink_right"):
 		if scale.x >= 1:
 			scale.x -= Autoload.upgradeSpeed/10;
 			position.x += Autoload.upgradeSpeed;
-			Autoload.growPoints += 0.005
+			Autoload.growPoints += Autoload.upgradeEfficiency/2;
 	if Input.is_action_pressed("shrink_up"):
 		if scale.y >= 1:
 			scale.y -= Autoload.upgradeSpeed/10;
 			position.y -= Autoload.upgradeSpeed;
-			Autoload.growPoints += 0.005
+			Autoload.growPoints += Autoload.upgradeEfficiency/2;
 	if Input.is_action_pressed("shrink_down"):
 		if scale.y >= 1:
 			scale.y -= Autoload.upgradeSpeed/10;
 			position.y += Autoload.upgradeSpeed;
-			Autoload.growPoints += 0.005
+			Autoload.growPoints += Autoload.upgradeEfficiency/2;
 	if Autoload.growPoints < 0:
 		get_parent().remove_child(get_parent().get_children()[0]);
 
