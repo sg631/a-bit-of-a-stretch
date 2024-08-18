@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj45gjjilgmo2"]
+
+[ext_resource type="Script" path="res://killbox.gd" id="1_jgbcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj7ve"]
+size = Vector2(72, 70)
+
+[node name="KillBox" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_jgbcu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gj7ve")
