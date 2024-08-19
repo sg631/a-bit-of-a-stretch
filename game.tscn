@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://cey3nrc5mlu4s"]
+[gd_scene load_steps=14 format=4 uid="uid://cey3nrc5mlu4s"]
 
+[ext_resource type="Script" path="res://game.gd" id="1_o2s42"]
 [ext_resource type="PackedScene" uid="uid://xqpiflreh0sr" path="res://player.tscn" id="1_u8q30"]
 [ext_resource type="FontFile" uid="uid://dfomycbubcspr" path="res://PixelifySans-VariableFont_wght.ttf" id="2_paix3"]
 [ext_resource type="Script" path="res://growPoints.gd" id="3_8gu2j"]
@@ -75,6 +76,7 @@ sources/1 = SubResource("TileSetAtlasSource_a2bgx")
 
 [node name="Game" type="Node2D"]
 position = Vector2(0, -348)
+script = ExtResource("1_o2s42")
 
 [node name="Player" parent="." instance=ExtResource("1_u8q30")]
 position = Vector2(-17, -4)
@@ -374,6 +376,7 @@ offset_bottom = -178.0
 theme_override_font_sizes/font_size = 9
 text = "Spend Soul Energy Here!"
 
+<<<<<<< Updated upstream
 [node name="Label5" type="Label" parent="."]
 offset_left = 5418.0
 offset_top = -1992.0
@@ -383,3 +386,6 @@ theme_override_font_sizes/font_size = 9
 text = "By: Abraham Alex - Level Design,
  Samvith Bhamidipati - Functionality, 
 and Elon Owens - Textures."
+=======
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+>>>>>>> Stashed changes
