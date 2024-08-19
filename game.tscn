@@ -64,6 +64,7 @@ texture = ExtResource("5_68r1d")
 6:2/0 = 0
 6:2/0/z_index = 10
 6:2/0/custom_data_0 = true
+4:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mpdaf"]
 physics_layer_0/collision_layer = 3
