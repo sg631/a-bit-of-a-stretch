@@ -350,7 +350,7 @@ scale = Vector2(1.50791, 1.32)
 theme = ExtResource("9_mi8ib")
 theme_override_font_sizes/font_size = 9
 text = "Tutorial:
-Arrow Keys to Stretch, WASD to Shrink
+Arrow Keys to Stretch, WASD to Shrink, Shift to Slow Down
 Stretch up. then Shrink  up and Stretch Left/Right to Jump.
 Stretch and Shrink in the Same Direction while doing any 
 action to sprint during it."
