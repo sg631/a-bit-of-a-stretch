@@ -329,10 +329,10 @@ position = Vector2(1353, 138)
 scale = Vector2(-0.04, 0.28)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 5433.0
-offset_top = -2005.0
-offset_right = 5562.0
-offset_bottom = -1972.0
+offset_left = 5432.0
+offset_top = -2017.0
+offset_right = 5561.0
+offset_bottom = -1984.0
 theme = ExtResource("9_mi8ib")
 text = "You Did It!"
 metadata/_edit_use_anchors_ = true
@@ -373,3 +373,13 @@ offset_right = 1930.0
 offset_bottom = -178.0
 theme_override_font_sizes/font_size = 9
 text = "Spend Soul Energy Here!"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 5418.0
+offset_top = -1992.0
+offset_right = 5578.0
+offset_bottom = -1947.0
+theme_override_font_sizes/font_size = 9
+text = "By: Abraham Alex - Level Design,
+ Samvith Bhamidipati - Functionality, 
+and Elon Owens - Textures."
