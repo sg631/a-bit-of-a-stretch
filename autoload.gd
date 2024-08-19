@@ -8,4 +8,6 @@ var shopShouldClose: bool = false;
 var checkpoint: int = 0;
 
 func closeShop() -> void:
-	get_parent().get_node("Game").remove_child(get_parent().get_node("Game/ShopUI"))
+	#get_parent().get_node("Game").remove_child(get_parent().get_node("Game/ShopUI"))
+	#get_parent().get_node("Game/ShopUI").hide();
+	null

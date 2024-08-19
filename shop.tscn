@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6wyt8i6iyyk5"]
+[gd_scene load_steps=6 format=3 uid="uid://b6wyt8i6iyyk5"]
 
 [ext_resource type="Script" path="res://shop.gd" id="1_4cp3i"]
 [ext_resource type="Theme" uid="uid://0vx47m2knchi" path="res://new_theme.tres" id="4_dfu10"]
 [ext_resource type="Script" path="res://upgrade_speed.gd" id="5_c8mqm"]
 [ext_resource type="Script" path="res://efficiency_upgrade.gd" id="6_7umlu"]
-[ext_resource type="Script" path="res://close_shop.gd" id="6_jr5t4"]
 [ext_resource type="Script" path="res://length_upgrade.gd" id="7_67342"]
 
 [node name="ShopUI" type="Node"]
@@ -12,37 +11,39 @@ script = ExtResource("1_4cp3i")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchor_left = 0.017
-anchor_top = 0.5
-anchor_right = 0.241
+anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -45.584
-offset_top = -658.0
-offset_right = -263.632
+offset_left = -26.0
+offset_top = -982.0
+offset_right = 14.0
 offset_bottom = -942.0
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 2
-anchor_left = 1.0
-anchor_top = 8.35
-anchor_right = 7.075
-anchor_bottom = 15.75
-offset_left = -15.0
-offset_bottom = 44.0
+anchor_left = 0.625
+anchor_top = 24.55
+anchor_right = 0.625
+anchor_bottom = 24.55
+offset_top = -200.0
+offset_right = 247.0
+offset_bottom = -6.10352e-05
 color = Color(0.196078, 0.196078, 0.196078, 1)
 
 [node name="BoxContainer" type="BoxContainer" parent="Control/ColorRect"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.0
+anchor_top = 0.995
 anchor_bottom = 1.017
-offset_bottom = -4.78
+offset_top = -199.0
+offset_right = 248.0
+offset_bottom = -49.267
 vertical = true
 
 [node name="Shop Label" type="Label" parent="Control/ColorRect/BoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 20
 text = "Shop"
 horizontal_alignment = 1
 
@@ -50,6 +51,7 @@ horizontal_alignment = 1
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 10
 text = "Speed Upgrade"
 script = ExtResource("5_c8mqm")
 
@@ -65,6 +67,7 @@ horizontal_alignment = 1
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 10
 text = "Efficiency Upgrade"
 script = ExtResource("6_7umlu")
 
@@ -80,6 +83,7 @@ horizontal_alignment = 1
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_dfu10")
+theme_override_font_sizes/font_size = 10
 text = "Length Upgrade"
 script = ExtResource("7_67342")
 
@@ -89,14 +93,4 @@ theme = ExtResource("4_dfu10")
 theme_override_font_sizes/font_size = 10
 text = "Increases the stretch limit
 Cost: 3 Soul Energy"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="Control/ColorRect/BoxContainer"]
-layout_mode = 2
-text = "Close"
-script = ExtResource("6_jr5t4")
-
-[node name="Label" type="Label" parent="Control/ColorRect/BoxContainer"]
-layout_mode = 2
-text = "Sorry for it not working :("
 horizontal_alignment = 1
