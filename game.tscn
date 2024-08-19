@@ -336,5 +336,5 @@ theme = ExtResource("9_mi8ib")
 text = "You Did It!"
 
 [node name="KillBox7" parent="." instance=ExtResource("8_p15vl")]
-position = Vector2(2193, -161)
+position = Vector2(2193, -160)
 scale = Vector2(0.88001, 0.2)
