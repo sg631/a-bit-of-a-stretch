@@ -75,7 +75,7 @@ sources/1 = SubResource("TileSetAtlasSource_a2bgx")
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_u8q30")]
-position = Vector2(0, -24)
+position = Vector2(2, -19)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -115,7 +115,7 @@ position = Vector2(1756, -156)
 position = Vector2(2576, -303)
 
 [node name="SHOP" parent="." instance=ExtResource("7_tnco7")]
-position = Vector2(1860, -151)
+position = Vector2(1865, -149)
 
 [node name="SoulOrb5" parent="." instance=ExtResource("3_862ao")]
 position = Vector2(626, -72)
