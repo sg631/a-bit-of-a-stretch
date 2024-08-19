@@ -16,45 +16,85 @@ func _physics_process(delta: float) -> void:
 	#Stretching Movement
 	if Input.is_action_pressed("stretch_right"):
 		if scale.x < Autoload.upgradeLength:
-			scale.x += Autoload.upgradeSpeed/10;
-			position.x += Autoload.upgradeSpeed;
-			Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if not Input.is_action_pressed("slow_down"):
+				scale.x += Autoload.upgradeSpeed/10;
+				position.x += Autoload.upgradeSpeed;
+				Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if Input.is_action_pressed("slow_down"):
+				scale.x += Autoload.upgradeSpeed/20;
+				position.x += Autoload.upgradeSpeed/2;
+				Autoload.growPoints -= Autoload.upgradeEfficiency/2;
 	if Input.is_action_pressed("stretch_left"):
 		if scale.x < Autoload.upgradeLength:
-			scale.x += Autoload.upgradeSpeed/10;
-			position.x -= Autoload.upgradeSpeed;
-			Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if not Input.is_action_pressed("slow_down"):
+				scale.x += Autoload.upgradeSpeed/10;
+				position.x -= Autoload.upgradeSpeed;
+				Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if Input.is_action_pressed("slow_down"):
+				scale.x += Autoload.upgradeSpeed/20;
+				position.x -= Autoload.upgradeSpeed/2;
+				Autoload.growPoints -= Autoload.upgradeEfficiency/2;
 	if Input.is_action_pressed("stretch_up"):
 		if scale.y < Autoload.upgradeLength:
-			scale.y += Autoload.upgradeSpeed/10;
-			position.y += Autoload.upgradeSpeed;
-			Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if not Input.is_action_pressed("slow_down"):
+				scale.y += Autoload.upgradeSpeed/10;
+				position.y += Autoload.upgradeSpeed;
+				Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if Input.is_action_pressed("slow_down"):
+				scale.y += Autoload.upgradeSpeed/20;
+				position.y += Autoload.upgradeSpeed/2;
+				Autoload.growPoints -= Autoload.upgradeEfficiency/2;
 	if Input.is_action_pressed("stretch_down"):
 		if scale.y < Autoload.upgradeLength:
-			scale.y += Autoload.upgradeSpeed/10;
-			position.y += Autoload.upgradeSpeed;
-			Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if not Input.is_action_pressed("slow_down"):
+				scale.y += Autoload.upgradeSpeed/10;
+				position.y += Autoload.upgradeSpeed;
+				Autoload.growPoints -= Autoload.upgradeEfficiency;
+			if Input.is_action_pressed("slow_down"):
+				scale.y += Autoload.upgradeSpeed/20;
+				position.y += Autoload.upgradeSpeed/2;
+				Autoload.growPoints -= Autoload.upgradeEfficiency/2;
 	#Shrinking Movement
 	if Input.is_action_pressed("shrink_left"):
 		if scale.x >= 1:
-			scale.x -= Autoload.upgradeSpeed/10;
-			position.x -= Autoload.upgradeSpeed;
-			Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if not Input.is_action_pressed("slow_down"):
+				scale.x -= Autoload.upgradeSpeed/10;
+				position.x -= Autoload.upgradeSpeed;
+				Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if Input.is_action_pressed("slow_down"):
+				scale.x -= Autoload.upgradeSpeed/20;
+				position.x -= Autoload.upgradeSpeed/2;
+				Autoload.growPoints += Autoload.upgradeEfficiency/4;
 	if Input.is_action_pressed("shrink_right"):
 		if scale.x >= 1:
-			scale.x -= Autoload.upgradeSpeed/10;
-			position.x += Autoload.upgradeSpeed;
-			Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if not Input.is_action_pressed("slow_down"):
+				scale.x -= Autoload.upgradeSpeed/10;
+				position.x += Autoload.upgradeSpeed;
+				Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if Input.is_action_pressed("slow_down"):
+				scale.x -= Autoload.upgradeSpeed/20;
+				position.x += Autoload.upgradeSpeed/2;
+				Autoload.growPoints += Autoload.upgradeEfficiency/4;
 	if Input.is_action_pressed("shrink_up"):
 		if scale.y >= 1:
-			scale.y -= Autoload.upgradeSpeed/10;
-			position.y -= Autoload.upgradeSpeed;
-			Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if not Input.is_action_pressed("slow_down"):
+				scale.y -= Autoload.upgradeSpeed/10;
+				position.y -= Autoload.upgradeSpeed;
+				Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if Input.is_action_pressed("slow_down"):
+				scale.y -= Autoload.upgradeSpeed/20;
+				position.y -= Autoload.upgradeSpeed/2;
+				Autoload.growPoints += Autoload.upgradeEfficiency/4;
 	if Input.is_action_pressed("shrink_down"):
 		if scale.y >= 1:
-			scale.y -= Autoload.upgradeSpeed/10;
-			position.y += Autoload.upgradeSpeed;
-			Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if not Input.is_action_pressed("slow_down"):
+				scale.y -= Autoload.upgradeSpeed/10;
+				position.y += Autoload.upgradeSpeed;
+				Autoload.growPoints += Autoload.upgradeEfficiency/2;
+			if not Input.is_action_pressed("slow_down"):
+				scale.y -= Autoload.upgradeSpeed/20;
+				position.y += Autoload.upgradeSpeed/2;
+				Autoload.growPoints += Autoload.upgradeEfficiency/4;
 	if Autoload.growPoints < 0:
 		get_parent().remove_child(get_parent().get_children()[0]);
 
