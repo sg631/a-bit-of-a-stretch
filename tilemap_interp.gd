@@ -1,14 +1,17 @@
 extends TileMapLayer
 
-#func _process(delta: float) -> void:
-	#for cord in get_used_cells():
-		##print(get_cell_tile_data(cord).get_custom_data("death"))
-		#if not get_cell_tile_data(cord).get_collision_polygon_points(0, 0).is_empty():
-			#if get_parent().get_node("Player").position.x == 3:
-				#null
-	#if get_parent().get_node("Player"):
-		##bro
-		#null
-func _init() -> void:
-	print(get_coords_for_body_rid(rid_from_int64(64)))
-	print(get_cell_source_id(Vector2i(3, 3)))
+# Load the scene you want to instantiate
+var my_scene = preload("res://killcollidebox.tscn")
+
+func _ready():
+	var used_cells = get_used_cells()
+
+	for cell in used_cells:
+		var tile_id = get_cell_source_id(cell)
+		if tile_id != -1:
+			# Retrieve the tile's data and check for the custom data 'death'
+			var tile_data = get_cell_tile_data(cell)
+			if tile_data != null and tile_data.get_custom_data("death"):
+				var instance = my_scene.instantiate()
+				instance.position = map_to_local(cell)
+				add_child(instance)
