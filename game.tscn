@@ -76,7 +76,7 @@ sources/1 = SubResource("TileSetAtlasSource_a2bgx")
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_u8q30")]
-position = Vector2(2, -19)
+position = Vector2(-17, -4)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -338,3 +338,16 @@ text = "You Did It!"
 [node name="KillBox7" parent="." instance=ExtResource("8_p15vl")]
 position = Vector2(2193, -160)
 scale = Vector2(0.88001, 0.2)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -135.0
+offset_top = -122.0
+offset_right = 118.0
+offset_bottom = 10.0
+scale = Vector2(1.50791, 1.32)
+theme_override_font_sizes/font_size = 9
+text = "Tutorial:
+Arrow Keys to Stretch, WASD to Shrink
+Stretch up. then Shrink  up and Stretch Left/Right to Jump.
+Stretch and Shrink in the Same Direction while doing any 
+action to sprint during it."
