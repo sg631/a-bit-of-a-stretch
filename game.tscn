@@ -349,7 +349,7 @@ offset_bottom = 13.0
 scale = Vector2(1.50791, 1.32)
 theme = ExtResource("9_mi8ib")
 theme_override_font_sizes/font_size = 10
-text = "Tutorial:
+text = "A-Bit-Of-A-Stretch - Tutorial:
 Arrow Keys to Stretch, WASD to Shrink, Shift to Slow Down
 Stretch up. then Shrink  up and Stretch Left/Right to Jump.
 Stretch and Shrink in the Same Direction while doing any 
