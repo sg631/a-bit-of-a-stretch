@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://shoptrigger.gd" id="2_ftpre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86r1l"]
+size = Vector2(35, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jucac"]
 size = Vector2(53, 37)
@@ -16,6 +17,7 @@ size = Vector2(53, 37)
 texture = ExtResource("1_3ahjc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_86r1l")
 
 [node name="Area2D" type="Area2D" parent="."]
