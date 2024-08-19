@@ -342,10 +342,10 @@ position = Vector2(2193, -160)
 scale = Vector2(0.88001, 0.2)
 
 [node name="Label2" type="Label" parent="."]
-offset_left = -136.0
-offset_top = -119.0
-offset_right = 161.0
-offset_bottom = 13.0
+offset_left = -140.0
+offset_top = -135.0
+offset_right = 157.0
+offset_bottom = -3.0
 scale = Vector2(1.50791, 1.32)
 theme = ExtResource("9_mi8ib")
 theme_override_font_sizes/font_size = 10
@@ -353,7 +353,8 @@ text = "A-Bit-Of-A-Stretch - Tutorial:
 Arrow Keys to Stretch, WASD to Shrink, Shift to Slow Down
 Stretch up. then Shrink  up and Stretch Left/Right to Jump.
 Stretch and Shrink in the Same Direction while doing any 
-action to sprint during it."
+action to sprint during it.
+If you run out of Soul Energy, you die!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="."]
