@@ -28,8 +28,7 @@ anchor_top = 8.35
 anchor_right = 7.075
 anchor_bottom = 15.75
 offset_left = -15.0
-offset_right = 3.05176e-05
-offset_bottom = -6.10352e-05
+offset_bottom = 44.0
 color = Color(0.196078, 0.196078, 0.196078, 1)
 
 [node name="BoxContainer" type="BoxContainer" parent="Control/ColorRect"]
@@ -38,7 +37,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.017
-offset_bottom = -0.0320129
+offset_bottom = -4.78
 vertical = true
 
 [node name="Shop Label" type="Label" parent="Control/ColorRect/BoxContainer"]
@@ -96,3 +95,8 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Close"
 script = ExtResource("6_jr5t4")
+
+[node name="Label" type="Label" parent="Control/ColorRect/BoxContainer"]
+layout_mode = 2
+text = "Sorry for it not working :("
+horizontal_alignment = 1

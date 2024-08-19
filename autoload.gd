@@ -8,4 +8,4 @@ var shopShouldClose: bool = false;
 var checkpoint: int = 0;
 
 func closeShop() -> void:
-	get_node("res://game.tscn/Game")
+	get_parent().get_node("Game").remove_child(get_parent().get_node("Game/ShopUI"))
