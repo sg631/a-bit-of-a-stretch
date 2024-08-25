@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	#if Input.is_action_just_pressed("stretch_down") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
-
+	
 	#Stretching Movement
 	if Input.is_action_pressed("stretch_right"):
 		if scale.x < Autoload.upgradeLength:
