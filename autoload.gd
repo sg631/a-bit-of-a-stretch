@@ -16,17 +16,4 @@ func closeShop() -> void:
 
 func killPlayer() -> void:
 	print(get_node("/root/Game/Player").position)
-	
-	# If the player is a rigidbody, you should call `teleport_player` instead.
-	teleport_player(Vector2(float(checkpoint["x"]), float(checkpoint["y"])))
-
-func teleport_player(target_position: Vector2) -> void:
-	var player = get_node("/root/Game/Player")
-	if player is RigidBody2D:
-		player.position = target_position
-		# Set linear_velocity to zero to stop any ongoing movement
-		player.linear_velocity = Vector2.ZERO
-		# Set angular_velocity to zero to stop any rotation
-		player.angular_velocity = 0.0
-	else:
-		player.position = target_position
+	get_tree().reload_current_scene()
