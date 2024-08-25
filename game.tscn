@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cey3nrc5mlu4s"]
+[gd_scene load_steps=15 format=4 uid="uid://cey3nrc5mlu4s"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_o2s42"]
 [ext_resource type="PackedScene" uid="uid://xqpiflreh0sr" path="res://player.tscn" id="1_u8q30"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bvvub3tnowtof" path="res://shop_code.tscn" id="7_tnco7"]
 [ext_resource type="PackedScene" uid="uid://cj45gjjilgmo2" path="res://killcollidebox.tscn" id="8_p15vl"]
 [ext_resource type="Theme" uid="uid://0vx47m2knchi" path="res://new_theme.tres" id="9_mi8ib"]
+[ext_resource type="PackedScene" uid="uid://808gnfiv3t4p" path="res://checkpoint.tscn" id="11_hbbkl"]
 
 [sub_resource type="Theme" id="Theme_lklhq"]
 /font_sizes/font = 16
@@ -490,3 +491,6 @@ scale = Vector2(0.569215, 0.750901)
 theme_override_font_sizes/font_size = 10
 text = "Stretch upwards between 2 blocks to 
 latch onto it! Then pull yourself UP!"
+
+[node name="Checkpoint" parent="." instance=ExtResource("11_hbbkl")]
+position = Vector2(310, 29)
