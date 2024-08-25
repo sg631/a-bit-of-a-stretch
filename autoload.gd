@@ -6,8 +6,8 @@ var upgradeLength: float = 5
 var upgradeEfficiency: float = 0.005
 var shopLoaded: bool = false
 var checkpoint: Dictionary = {
-	"x": float(1),
-	"y": float(1),
+	"x": float(-4),
+	"y": float(-3),
 }
 
 func closeShop() -> void:
