@@ -6,3 +6,5 @@ func _physics_process(delta: float) -> void:
 			print("TOUCHING PLAYER")
 			get_parent().remove_child(get_parent().get_children()[0])
 			Autoload.checkpoint += 1;
+			print("Checkpoint reached: " + str(Autoload.checkpoint));
+			queue_free();
