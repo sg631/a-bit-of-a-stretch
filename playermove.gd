@@ -4,14 +4,15 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0
 
-var is_just_spawned = true
-
 func _init() -> void:
 	position.x = Autoload.checkpoint["x"]
 	position.y = Autoload.checkpoint["y"]
+	Autoload.player_just_spawned = true
 func _physics_process(delta: float) -> void:
-	position.x = Autoload.checkpoint["x"]
-	position.y = Autoload.checkpoint["y"]
+	if Autoload.player_just_spawned:
+		position.x = Autoload.checkpoint["x"]
+		position.y = Autoload.checkpoint["y"]
+		Autoload.player_just_spawned = false
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

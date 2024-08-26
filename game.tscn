@@ -458,6 +458,7 @@ theme_override_font_sizes/font_size = 9
 text = "By: Abraham Alex - Level Design,
  Samvith Bhamidipati - Functionality, 
 and Elon Owens - Textures."
+script = ExtResource("1_o2s42")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
