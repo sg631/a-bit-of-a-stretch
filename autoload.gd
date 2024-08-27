@@ -7,7 +7,7 @@ var upgradeEfficiency: float = 0.005
 var shopLoaded: bool = false
 var player_just_spawned = false
 var checkpoint: Dictionary = {
-	"x": float(3950),
+	"x": float(5500),
 	"y": float(-1500),
 }
 
